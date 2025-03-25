@@ -1,0 +1,25 @@
+.main-search {
+  max-width: 1410px;
+  margin: auto;
+  padding: 0 10px 30px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    padding: 20px 30px 50px;
+  }
+
+  .product-grid {
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    @include grid;
+
+    @media screen and (min-width: 768px) {
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.social-images--content {
+  max-width: 1410px;
+  margin: auto;
+  padding: 20px 10px 60px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 45px 30px 120px;
+  }
+}
+
+.social-images--title-area {
+  gap: 15px;
+  padding-bottom: 20px;
+  @include flex;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 25px;
+  }
+}
+
+.social-images--svg .icon-instagram {
+  max-width: 30px;
+  fill: var(--color-blue-dark);
+  width: 100%;
+}
+
+.social-images--title-content {
+  margin: auto;
+  margin-left: 0;
+
+  @media screen and (min-width: 768px) {
+    @include flex;
+  }
+}
+
+.social-images .title {
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 5px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.social-images .title a {
+  color: inherit;
+  font-size: inherit;
+}
+
+.social-images .text {
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: underline;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 5px;
+  }
+}
+
+.social-images--block {
+  gap: 10px;
+  @include flex;
+
+  @media screen and (min-width: 768px) {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    flex-flow: row wrap;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    @include grid
+  }
+}
+
+.social-images--image {
+  @media screen and (max-width: 1023px) {
+    flex: 1 45%;
+  }
+}
+
+.social-images--image .image:last-child {
+  @media screen and (max-width: 1023px) {
+    flex: 1 50%;
+  }
+}
+
+.social-images .thumbnail--container {
+  position: relative;
+  display: block;
+  padding-bottom: 180px;
+
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 436px;
+  }
+}
+
+.social-images .image--thumbnail {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: 85%;
+}

@@ -1,0 +1,23 @@
+/* Overlay */
+body.open-popup #overlay,
+body[class^="open-"] #overlay {}
+
+.open-cart #overlay,
+.open-search #overlay,
+.open-popup #overlay {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--color-black);
+  @include transition(opacity, 0.4s, ease-in-out);
+}

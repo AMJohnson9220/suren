@@ -1,0 +1,93 @@
+.orders-list {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, auto);
+  gap: 10px;
+  @include grid;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0;
+  }
+
+  b,
+  span {
+    color: var(--color-black);
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  span {
+    font-weight: 500;
+  }
+
+  b {
+    font-weight: bold;
+  }
+
+  .button-container {
+    padding-top: 15px;
+    gap: 20px;
+    justify-content: space-between;
+    @include flex;
+  }
+
+  .button-container .button {
+    max-width: 100%;
+    padding: 11px;
+  }
+
+  .link {
+    color: #0002ff;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: underline;
+  }
+
+  .btn {
+    display: block;
+    line-height: 18px;
+    justify-content: center;
+    padding: 11px;
+    text-transform: uppercase;
+    @include flex;
+
+    &:last-child {
+      width: 100%;
+    }
+
+    svg {
+      width: 15px;
+      margin-right: 8px;
+
+      path {
+        fill: var(--color-black);
+      }
+    }
+  }
+}
+
+.order-card {
+  border: 1px solid var(--color-blue-dark);
+  border-radius: 4px;
+  padding: 15px 20px 20px;
+
+  &.no--order {
+    padding: 15px 20px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  li {
+    margin-bottom: 5px;
+    justify-content: space-between;
+    @include flex;
+  }
+
+  .no--order-text {
+    display: block;
+    text-align: center;
+  }
+}

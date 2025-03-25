@@ -1,0 +1,124 @@
+.account-main {
+  @media screen and (min-width: 768px) {
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "banner banner"
+      "nav main"
+      "offers main";
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    @include flex;
+  }
+
+  banner {
+    grid-area: banner;
+
+    @media screen and (max-width: 767px) {
+      order: 1;
+    }
+  }
+
+  nav {
+    grid-area: nav;
+
+    @media screen and (max-width: 767px) {
+      order: 2;
+    }
+  }
+
+  offers {
+    grid-area: offers;
+
+    @media screen and (max-width: 767px) {
+      order: 4;
+    }
+  }
+
+  main {
+    grid-area: main;
+
+    @media screen and (max-width: 767px) {
+      order: 3;
+      padding: 0 10px;
+    }
+  }
+}
+
+// * Account Header styles
+.account-header {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+
+    grid-template-areas: "title title title title shop";
+
+    margin-bottom: 20px;
+  }
+
+  .header-title {
+    grid-area: title;
+    align-items: center;
+    border: 1px solid var(--color-blue-dark);
+    border-radius: 4px;
+    background-color: var(--color-white);
+    padding: 6px 20px;
+    @include flex;
+
+    .text {
+      color: var(--color-black);
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 20px;
+    }
+  }
+
+  .button {
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
+    @include flex;
+
+    .text {
+      color: var(--color-black);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    &.b-shop {
+      grid-area: shop;
+    }
+  }
+
+  .icon {
+    margin-right: 8px;
+
+    svg {
+      height: 14px;
+      width: auto;
+      fill: var(--color-black);
+
+      g {
+        fill: var(--color-black);
+      }
+    }
+
+    &.icon-black {
+      svg {
+        fill: var(--color-black);
+
+        g {
+          fill: var(--color-black);
+        }
+      }
+    }
+  }
+}

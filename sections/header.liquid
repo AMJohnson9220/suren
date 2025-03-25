@@ -32,6 +32,11 @@
     }
   {%- endif -%}
 
+  .header--icon-logo {
+    width: 100%;
+    height: 90px;
+  }
+
   .menu-drawer-container {
     display: flex;
   }
@@ -168,7 +173,12 @@
                 }}
               </div>
             {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
+              <img
+                src="{{ 'logo.svg' | asset_url }}"
+                alt="{{ settings.store-title }} logo"
+                loading="eager"
+                class="header--icon-logo"
+              >
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}

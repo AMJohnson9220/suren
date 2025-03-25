@@ -975,6 +975,11 @@
         "name": "Featured product"
       }
     },
+    "featured": {
+      "image": {
+        "name": "Featured Image"
+      }
+    },
     "footer": {
       "name": "Footer",
       "blocks": {

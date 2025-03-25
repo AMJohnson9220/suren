@@ -1,0 +1,90 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: initial;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.title-lar {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.title-sma {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+p {
+  color: var(--color-black);
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0;
+}
+
+ul,
+li {
+  all: unset;
+  box-sizing: border-box;
+}
+
+.toggler {
+  cursor: pointer;
+}
+
+.hidden,
+.is-hidden {
+  display: none;
+}
+
+.no-pointer {
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.visibly-hidden {
+  visibility: hidden;
+}

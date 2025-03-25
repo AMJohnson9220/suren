@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+:root {
+  /* Fonts */
+  --font-primary: "montserrat", sans-serif;
+
+  /* Color black */
+  --color-black-light: #31302f;
+  --color-black: #090909;
+
+  /* Color blue */
+  --color-blue-light: #ebfcff;
+  --color-blue: #cbf7ff;
+  --color-blue-dark: #6bc4d3;
+  --color-blue-extra-dark: #357681;
+
+  /* Color grey */
+  --color-grey-background: #cbd2d6;
+  --color-grey-light: #f8f8f8;
+  --color-grey-dark: #595550;
+
+  /* Color white */
+  --color-white: #fff;
+
+  /* Variant flavour colours */
+  --color-blackberry: #bb1b6c;
+  --color-blueberry: #0072bc;
+  --color-lemonade: gold;
+  --color-ice: lightblue;
+  --color-raspberry: purple;
+  --color-strawberry: red;
+}

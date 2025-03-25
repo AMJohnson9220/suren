@@ -1,0 +1,74 @@
+/* flex */
+@mixin flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* flex column */
+@mixin column() {
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+/* grid */
+@mixin grid() {
+  display: -ms-grid;
+  display: grid;
+}
+
+/* align justify space */
+@mixin justifySpace() {
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+
+/* align justify center */
+@mixin justifyCenter() {
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+/* calc */
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression}) !important;
+  #{$property}: -webkit-calc(#{$expression}) !important;
+  #{$property}: calc(#{$expression}) !important;
+}
+
+/* transition */
+@mixin transition($what: all, $time: 0.4s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+  -moz-transition: $what $time $how;
+  -ms-transition: $what $time $how;
+  -o-transition: $what $time $how;
+  transition: $what $time $how;
+}
+
+/* rotate */
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+/* transition */
+@mixin transform($translate) {
+  -moz-transform: $translate;
+  -o-transform: $translate;
+  -ms-transform: $translate;
+  -webkit-transform: $translate;
+  transform: $translate;
+}
+
+/* transition delay */
+@mixin transition-delay($delay) {
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay: $delay;
+}

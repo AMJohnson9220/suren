@@ -1,0 +1,112 @@
+.home-products {
+  max-width: 1410px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 25px 10px 20px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 45px 30px 40px;
+  }
+}
+
+.home-products--content {
+  padding-bottom: 30px;
+  text-align: center;
+
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 45px;
+  }
+}
+
+.home-products--block .title {
+  display: block;
+  font-weight: 600;
+  line-height: 22px;
+  padding-bottom: 10px;
+}
+
+.home-products--content .title-lar {
+  max-width: 60%;
+  margin: auto;
+  padding-bottom: 10px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 37px;
+    line-height: 42px;
+    max-width: 100%;
+  }
+}
+
+.home-products--content .title {
+  display: block;
+  font-weight: 400;
+  padding-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.home-products--content-text {
+  padding: 0 20px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 17px;
+    line-height: 28px;
+    max-width: 45%;
+    margin: auto;
+  }
+}
+
+.home-products--collection {
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  @include grid;
+
+  @media screen and (min-width: 1024px) {
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.home-products--image {
+  position: relative;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  grid-column: span 2;
+}
+
+.home-products--button {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 50px;
+  box-shadow: none;
+  max-width: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 17px 10px;
+  transform: translate(-50%, -50%);
+  @include transition(all, 0.3s, ease-in-out);
+}
+
+.home-products--image:hover .home-products--button {
+  background-color: var(--color-black);
+}
+
+.home-products--icon {
+  max-width: 20px;
+  margin: auto;
+  margin-right: 12px;
+  pointer-events: none;
+  @include flex;
+}
+
+.home-products--icon svg {
+  margin: auto;
+  @include transition(all, 0.3s, ease-in-out);
+}
+
+.home-products--image:hover .home-products--icon svg {
+  fill: var(--color-white);
+}

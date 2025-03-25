@@ -1,0 +1,237 @@
+.main-product {
+  max-width: 1350px;
+  margin: auto;
+  padding: 10px 10px 15px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    padding: 20px 20px 15px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 20px 30px 25px;
+  }
+}
+
+.main-product--container {
+  // border-bottom: 1px solid var(--color-gold);
+  // padding-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    gap: 20px;
+    max-width: 1120px;
+    margin: auto;
+    @include flex;
+  }
+
+  @media screen and (min-width: 1024px) {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.main-product--image {
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    max-width: 665px;
+  }
+}
+
+.main-product--info {
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    margin: auto;
+    max-width: 435px;
+  }
+}
+
+.main-product--dispatch-info,
+.main-product--variant-info {
+  @media screen and (min-width: 768px) {
+    max-width: 355px;
+  }
+}
+
+.main-product .title-lar {
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 37px;
+    line-height: 42px;
+    text-align: left;
+  }
+}
+
+.main-product--flavour-block {
+  padding: 10px 0;
+  grid-template-columns: repeat(1, 1fr);
+  @include grid;
+}
+
+.main-product--variant-flavour {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.main-product--info .text {
+  @media screen and (min-width: 768px) {
+    max-width: 90%;
+  }
+}
+
+.main-product p {
+  display: block;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.main-product p .profile--title {
+  display: block;
+  color: inherit;
+  font-size: inherit;
+}
+
+.main-product--info li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.delivery {
+  background-color: var(--color-blue-light);
+  border: 1px solid var(--color-blue-dark);
+  border-radius: 4px;
+  margin-top: 20px;
+  padding: 10px 20px 15px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  @include grid;
+
+  .delivery--order {
+    gap: 10px;
+    @include flex;
+  }
+
+  .delivery--icon {
+    @include flex;
+  }
+
+  .icon {
+    display: block;
+    width: 100%;
+    max-width: 16px;
+    margin: auto;
+  }
+
+  #delivery--timer {
+    gap: 4px;
+    @include flex;
+  }
+
+  .delivery--text,
+  .shipping--amount {
+    display: block;
+    color: var(--color-black);
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .time {
+    color: var(--color-blue-dark);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+
+  .shipping--amount {
+    color: var(--color-blue-dark);
+    font-weight: 600
+  }
+}
+
+.main-product--variant-info {
+  border: 1px solid var(--color-blue-dark);
+  border-radius: 4px;
+  grid-template-columns: 23% 40% 34%;
+  grid-gap: 5px;
+  margin-top: 10px;
+  padding: 5px 10px 5px 5px;
+  grid-template-areas:
+    'image strength price'
+    'image deal quick-buy'
+  ;
+  @include grid;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 20px;
+  }
+
+  .variant--image {
+    grid-area: image;
+    max-width: 80px;
+  }
+
+  .variant--strength {
+    grid-area: strength;
+    margin: auto;
+    margin-left: 0;
+  }
+
+  .variant--price {
+    grid-area: price;
+    margin: auto;
+    margin-right: 0;
+  }
+
+  .variant--text {
+    display: block;
+    color: var(--color-black);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+}
+
+.main-product--variant-info {
+  .variant--quick-buy {
+    grid-area: quick-buy;
+  }
+
+  .quick-buy--component {
+    margin-right: 0;
+  }
+
+  .card-product--sold-out,
+  .card-product--coming-soon {
+    margin-right: 0;
+  }
+
+  .variant--deal {
+    grid-area: deal;
+    margin: auto;
+    margin-left: 0;
+  }
+
+  .deal--text {
+    display: block;
+    color: var(--color-blue-dark);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    text-decoration: underline;
+    margin: auto;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,44 @@
+.package-card {
+  display: block;
+  border: 1px solid var(--color-blue-dark);
+  border-radius: 4px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+
+  li {
+    padding-bottom: 5px;
+    justify-content: space-between;
+    @include flex;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  b,
+  span {
+    color: var(--color-black);
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 16px;
+    color: #0002ff;
+    text-decoration: underline;
+  }
+}
+
+.package-card--button-container {
+  border-top: 1px solid var(--color-blue-dark);
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.package-card--button-container .button {
+  color: var(--color-black);
+  max-width: 100%;
+  padding: 12px 20px;
+  text-decoration: none;
+}

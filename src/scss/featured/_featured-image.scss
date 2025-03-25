@@ -1,0 +1,31 @@
+// In use
+.featured-image {
+  box-sizing: border-box;
+  max-width: 810px;
+  margin: auto;
+  padding: 10px;
+
+  @media screen and (min-width: 768px) {
+    padding: 30px;
+  }
+}
+
+.featured-image--link {
+  display: block;
+  padding-bottom: 850px;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    max-width: 750px;
+    margin: auto;
+    padding-bottom: 500px;
+  }
+}
+
+.featured-image--link img {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100%;
+}

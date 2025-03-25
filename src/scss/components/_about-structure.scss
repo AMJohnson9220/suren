@@ -1,0 +1,40 @@
+.banner-category {
+  max-width: 1800px;
+  flex-direction: column;
+  @include flex;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
+}
+
+.banner-category .title {
+  font-size: 28px;
+  line-height: 32px;
+  padding-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 37px;
+    line-height: 42px;
+  }
+}
+
+.banner-category p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.featured-content-block {
+  border-top: 20px solid var(--color-blue-dark);
+  padding: 50px 10px 40px !important;
+
+  @media screen and (min-width: 768px) {
+    padding: 80px 30px !important;
+  }
+}

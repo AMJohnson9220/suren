@@ -1,0 +1,42 @@
+.breadcrumbs {
+  background-color: var(--color-blue-dark);
+  padding: 10px;
+
+  .inner {
+    max-width: 1410px;
+    padding: 0 10px;
+    margin: auto;
+    @include flex;
+
+    @media screen and (min-width: 768px) {
+      padding: 0 30px;
+    }
+  }
+
+  a,
+  span {
+    color: var(--color-black);
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding-right: 12px;
+    position: relative;
+  }
+
+  a {
+    &:after {
+      content: "/";
+      position: absolute;
+      right: 4px;
+      top: 0px;
+      font-size: 12px;
+    }
+  }
+}
+
+.template-blog .breadcrumbs,
+.template-customers-login .breadcrumbs {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+}

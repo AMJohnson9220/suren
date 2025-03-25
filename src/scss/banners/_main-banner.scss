@@ -1,0 +1,23 @@
+.main-banner {
+  border-bottom: 1px solid var(--color-blue-dark);
+}
+
+.main-banner--image {
+  position: relative;
+  padding-bottom: 375px;
+
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 0;
+  }
+}
+
+.main-banner--image img {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+  object-position: 88%;
+
+  @media screen and (min-width: 1024px) {
+    position: relative;
+  }
+}

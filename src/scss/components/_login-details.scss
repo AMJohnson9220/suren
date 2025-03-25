@@ -1,0 +1,346 @@
+#MainContent {
+  max-width: 1060px;
+  box-sizing: border-box;
+}
+
+.scroll-div {
+  transform: translateY(-70px);
+}
+
+.login-details {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px 10px 50px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 30px 30px 80px;
+    gap: 20px;
+    @include flex;
+  }
+}
+
+.account-form,
+.account-benefits {
+  width: 100%;
+  border: 1px solid var(--color-blue-dark);
+  border-radius: 8px;
+  background-color: var(--color-white);
+  padding: 30px 20px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 50px 20px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding: 50px;
+  }
+
+  .content {
+    margin: auto;
+    max-width: 310px;
+  }
+
+  .title {
+    display: block;
+    color: var(--color-black);
+    font-size: 16px;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: initial;
+    margin-top: 0;
+    padding-bottom: 10px;
+  }
+
+  a {
+    font-size: inherit;
+    color: #0002FF;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+}
+
+.account-form {
+  @media only screen and (max-width: 767px) {
+    padding-top: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  .login-register {
+    border: 1px solid var(--color-blue-dark);
+    border-radius: 6px;
+    padding: 2.5px;
+    cursor: pointer;
+    @include flex;
+
+    span {
+      width: 100%;
+      padding: 10px;
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 22px;
+      text-align: center;
+      color: var(--color-black);
+      background-color: var(--color-white);
+
+      &.active {
+        color: var(--color-white);
+        background-color: var(--color-blue-dark);
+      }
+
+      &:first-child {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &:last-child {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+
+  #loginDetails,
+  #registerDetails {
+    border-top: 1px solid var(--color-blue-dark);
+  }
+
+  #loginDetails {
+    margin-top: 20px;
+    padding-top: 20px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .field {
+      padding-bottom: 15px;
+    }
+
+    #login {
+      .form__message {
+        font-size: 15px;
+        color: var(--color-black);
+        margin: 0;
+        gap: 10px;
+        @include flex;
+      }
+
+      svg {
+        max-width: 30px;
+      }
+
+      .errors {
+        ul {
+          padding-bottom: 5px;
+
+          li {
+            font-size: 15px;
+            color: var(--color-black);
+          }
+        }
+      }
+    }
+
+    a {
+      font-size: 15px;
+      line-height: 18px;
+      text-decoration: underline;
+    }
+  }
+
+  #registerDetails {
+    margin-top: 20px;
+    padding-top: 15px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .form-title {
+      display: block;
+      color: var(--color-black);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 18px;
+      margin-bottom: 10px;
+    }
+
+    .field {
+      padding-bottom: 15px;
+    }
+
+    .customer {
+      .form__message {
+        font-size: 15px;
+        color: var(--color-black);
+        margin: 0;
+        gap: 10px;
+        @include flex;
+      }
+
+      svg {
+        max-width: 30px;
+        max-height: 30px;
+      }
+
+      ul {
+        padding-bottom: 5px;
+
+        li {
+          font-size: 14px;
+          color: var(--color-black);
+
+          a {
+            font-size: 14px;
+            color: var(--color-black);
+          }
+        }
+      }
+    }
+
+    .marketing {
+      input {
+        display: none;
+
+        &:checked+label {
+          span {
+            &:after {
+              display: block;
+              content: "";
+              position: absolute;
+              left: 7px;
+              top: 1px;
+              width: 10px;
+              height: 15px;
+              border: solid var(--color-blue-dark);
+              border-width: 0 3px 3px 0;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+
+      label {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 15px;
+        color: var(--color-white);
+        @include flex;
+
+        .checkmark {
+          font-size: 14px;
+          position: relative;
+          display: inline-block;
+          height: 25px;
+          min-width: 25px;
+          background-color: var(--color-blue-dark);
+          border: 1px solid var(--color-blue-dark);
+          border-radius: 6px;
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .button-container {
+    padding-top: 5px;
+
+    &.btn-register {
+      border-top: 1px solid var(--color-blue-dark);
+      margin-top: 5px;
+      padding-top: 20px;
+    }
+
+    a {
+      font-size: 13px;
+      line-height: 18px;
+      text-decoration: underline;
+    }
+
+    button {
+      border: transparent;
+      margin-bottom: 15px;
+      max-width: 100%;
+      padding: 12px 21px;
+    }
+  }
+
+  .account_text {
+    display: block;
+    color: var(--color-black);
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: underline;
+  }
+
+  #recover,
+  #recover+div {
+    display: none;
+  }
+
+  #recover:target {
+    display: block;
+  }
+
+  #recover:target+div {
+    display: block;
+  }
+
+  #recover:target~#login {
+    display: none;
+  }
+}
+
+.account-benefits {
+  max-height: 500px;
+  @include flex;
+
+  ul {
+    display: block;
+    padding: 5px 0;
+  }
+
+  li {
+    color: var(--color-black);
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    @include flex;
+  }
+
+  svg {
+    border: 1px solid var(--color-blue-dark);
+    border-radius: 20px;
+    height: 14px;
+    width: 14px;
+    padding: 2px;
+    box-sizing: border-box;
+    margin-right: 8px;
+  }
+
+  path {
+    fill: var(--color-blue-dark);
+  }
+
+  p {
+    color: var(--color-blue-dark);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    padding-top: 5px;
+
+    a {
+      font-size: inherit;
+      color: #0002FF;
+      text-decoration: underline;
+    }
+  }
+}

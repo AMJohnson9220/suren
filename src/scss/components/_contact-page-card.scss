@@ -1,0 +1,159 @@
+.contact {
+  border-bottom: 20px solid var(--color-blue-dark);
+  padding: 15px 10px 50px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.contact--container {
+  max-width: 1410px;
+  margin: auto;
+  border: 1px solid var(--color-blue);
+  border-radius: 8px;
+
+  @media screen and (min-width: 768px) {
+    border: 0;
+    column-gap: 20px;
+    padding: 15px 30px 80px;
+    @include flex;
+  }
+}
+
+.contact--card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 50px 25px 60px;
+
+  @media screen and (min-width: 768px) {
+    border: 1px solid var(--color-blue-dark);
+    border-radius: 8px;
+    padding: 25px 20px 40px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 50px 55px 70px;
+  }
+
+  &:first-child {
+    @media screen and (max-width: 767px) {
+      padding-bottom: 0;
+    }
+  }
+
+  &:nth-child(2) {
+    @media screen and (max-width: 767px) {
+      padding-top: 30px;
+    }
+  }
+
+  &:nth-child(3) {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: block;
+      padding: 20px;
+    }
+  }
+}
+
+.contact .title--secondary {
+  color: var(--color-black);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: initial;
+  margin-bottom: 0;
+}
+
+.contact .text {
+  display: block;
+  color: var(--color-black);
+  font-size: 15px;
+  line-height: 24px;
+
+  &:nth-child(6) {
+    padding-bottom: 5px;
+  }
+}
+
+.contact--service {
+  border-top: 1px solid var(--color-blue-dark);
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+  margin-top: 30px;
+  padding: 25px 0 20px;
+  @include grid;
+}
+
+.contact--service-block {
+  @include flex;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 10px;
+    fill: var(--color-blue-dark);
+  }
+}
+
+.service-block--info {
+  color: var(--color-black);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: auto;
+  margin-left: 0;
+}
+
+.contact--btn-container {
+  @include flex;
+  column-gap: 15px;
+  border-bottom: 1px solid var(--color-blue-dark);
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+
+  .button {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    margin-left: 0;
+    text-align: center;
+    text-transform: initial;
+
+    &:last-child {
+      margin: auto;
+      margin-right: 0;
+    }
+  }
+}
+
+.contact .business--info {
+  display: block;
+  color: var(--color-black);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+}
+
+.contact-form {
+  max-width: 960px !important;
+  padding: 15px 0 0 !important;
+
+  .field {
+    margin-bottom: 15px;
+  }
+
+  .button {
+    border: 0;
+    max-width: 100%;
+  }
+}
+
+#contact_form>div:nth-child(6) {
+  margin-bottom: 20px;
+}
