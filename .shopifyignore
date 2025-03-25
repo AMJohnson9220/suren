@@ -1,0 +1,12 @@
+### ignore project files/directories
+config/*_data.json
+templates/*.json
+sections/*.json
+_docs/*
+
+### ignore project files/directories
+package.json
+package-lock.json
+
+### ignore notes
+notes.md
