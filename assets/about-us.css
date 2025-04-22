@@ -1,0 +1,56 @@
+.about-us {
+  max-width: 800px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 40px 20px;
+}
+
+.page-title {
+  display: block;
+  margin-top: 0;
+  text-align: center;
+}
+
+.about-us--container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.about-us--block {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us--image {
+  display: block;
+  order: 2;
+}
+
+.about-us--image img {
+  height: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us {
+    padding: 60px 30px;
+  }
+
+  .about-us--container {
+    grid-gap: 40px;
+  }
+
+  .about-us--block {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .about-us--block:nth-child(2) p {
+    order: 2;
+  }
+
+  .about-us--block p {
+    margin: auto 0;
+  }
+}

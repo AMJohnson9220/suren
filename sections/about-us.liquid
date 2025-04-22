@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="{{ 'about-us.css' | asset_url }}" media="print" onload="this.media='all'">
+<h1 class="page-title">{{ page.title }}</h1>
+
+<div class="about-us--container">
+  {%- for block in section.blocks -%}
+    <div class="about-us--block">
+      {%- if block.settings.image != blank -%}
+        <span class="about-us--image">
+          {{ block.settings.image | image_url: width: 800 | image_tag: widths: '800', loading: 'lazy', alt: block.settings.image.alt }}
+        </span>
+      {%- endif -%}
+
+      {%- if block.settings.text != blank -%}
+        {{ block.settings.text }}
+      {%- endif -%}
+    </div>
+  {%- endfor -%}
+</div>
+
+
+{% schema %}
+{
+  "name": "t:sections.about-us.name",
+  "tag": "section",
+  "class": "about-us",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.about-us.name"
+    }
+  ]
+}
+{% endschema %}

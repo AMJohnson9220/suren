@@ -1,7 +1,7 @@
 {{ 'featured-image.css' | asset_url | stylesheet_tag }}
 
 {%- comment -%}In use{%- endcomment -%}
-{%- if section.settings.image != blank -%}
+{%- if section.settings.link != blank -%}
   <a href="{{ section.settings.link }}" class="featured-image--link">
     {{
       section.settings.image
@@ -9,6 +9,14 @@
       | image_tag: widths: '200, 300, 400, 450', loading: 'eager', alt: section.settings.image.alt
     }}
   </a>
+{%- else -%}
+  <span class="featured-image--link">
+    {{
+      section.settings.image
+      | image_url: width: 450
+      | image_tag: widths: '200, 300, 400, 450', loading: 'eager', alt: section.settings.image.alt
+    }}
+  </span>
 {%- endif -%}
 
 {% schema %}

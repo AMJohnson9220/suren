@@ -9,14 +9,37 @@
 
 @media screen and (min-width: 750px) {
   .newsletter-form {
-    align-items: flex-start;
-    margin: 0 auto;
-    max-width: 36rem;
+    margin: auto;
+    /* max-width: 36rem; */
   }
 }
 
 .newsletter-form__field-wrapper {
   width: 100%;
+}
+
+.newsletter-input {
+  border: 0;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  width: 100%;
+}
+
+.newsletter-field {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  /* border-bottom: 1px solid black; */
+}
+
+.newsletter-field .field__label {
+  position: absolute;
+}
+
+.newsletter-input:focus-visible {
+  outline: none;
+  outline-offset: 0;
+  box-shadow: none;
 }
 
 .newsletter-form__field-wrapper .field__input {
@@ -43,11 +66,12 @@
 }
 
 .newsletter-form__button {
-  width: 4.4rem;
-  margin: 0;
-  right: var(--inputs-border-width);
-  top: 0;
-  height: 100%;
+  display: block;
+  position: relative;
+  background-color: black !important;
+  color: white;
+  width: 45%;
+  margin: auto 0;
   z-index: 2;
 }
 

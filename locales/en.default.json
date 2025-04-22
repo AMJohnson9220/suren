@@ -58,7 +58,7 @@
     }
   },
   "newsletter": {
-    "label": "Email",
+    "label": "Enter your email for early access",
     "success": "Thanks for subscribing",
     "button_label": "Subscribe"
   },
